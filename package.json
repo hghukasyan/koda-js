@@ -1,6 +1,6 @@
 {
   "name": "koda-format",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "type": "module",
   "description": "Compact Object Data Architecture — text and binary format with canonical encoding",
   "main": "dist/index.js",
