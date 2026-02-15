@@ -18,7 +18,7 @@ KODA (Compact Object Data Architecture) is a structured data format designed for
 
 KODA addresses limitations of JSON (verbosity, no comments, non-deterministic key order), YAML (complexity, security issues), and binary formats like MessagePack (non-canonical, key repetition).
 
-**Positioning:** KODA is a **compact binary data format** first. It is optimized for **smaller payloads**, **efficient storage**, **reduced IO**, and **fast binary encode/decode** — not for beating JSON on raw text parsing speed. In real systems, KODA wins on size, IO efficiency, storage, and scalability (see [README.md](./README.md)).
+**Positioning:** KODA is a **compact binary data format** first. It is optimized for **smaller payloads**, **efficient storage**, **reduced IO**, and **fast binary encode/decode** - not for beating JSON on raw text parsing speed. In real systems, KODA wins on size, IO efficiency, storage, and scalability (see [README](https://github.com/hghukasyan/koda-format#readme)).
 
 ---
 
@@ -178,15 +178,15 @@ The root value is encoded as a single value. Values are encoded in order; no len
 
 | Tag (hex) | Type    | Encoding |
 |-----------|---------|----------|
-| 0x01      | Null    | — |
-| 0x02      | False   | — |
-| 0x03      | True    | — |
+| 0x01      | Null    | - |
+| 0x02      | False   | - |
+| 0x03      | True    | - |
 | 0x04      | Integer | 8 bytes signed big-endian (two's complement) |
 | 0x05      | Float   | 8 bytes IEEE 754 big-endian double |
 | 0x06      | String  | 4 bytes length (unsigned big-endian) + UTF-8 bytes |
 | 0x07      | Binary  | 4 bytes length + raw bytes (reserved/future) |
 | 0x10      | Array   | 4 bytes count N + N encoded values |
-| 0x11      | Object  | 4 bytes pair count K + K × (4 bytes key index + value) |
+| 0x11      | Object  | 4 bytes pair count K + K pairs of (4 bytes key index + value) |
 
 **Integer**: Must be in range [-2^63, 2^63-1]. Encoded as 8 bytes signed big-endian.
 

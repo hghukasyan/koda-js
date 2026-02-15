@@ -66,7 +66,7 @@ Size comparison for workloads that match KODA’s design: large documents, repea
 | Scenario | JSON | KODA binary | Reduction |
 |----------|------|-------------|-----------|
 | Large (500 items) | 54.4 KB | 26.2 KB | 52% |
-| 1000 rows × 100 items | 10.2 MB | 4.65 MB | 54% |
+| 1000 rows x 100 items | 10.2 MB | 4.65 MB | 54% |
 | 1 document, 10k long keys | 1.55 MB | 488 KB | 68% |
 
 The binary format stores each key once in a dictionary; documents with many repeated keys see the largest size reduction.
@@ -117,7 +117,7 @@ Decoding can be distributed across multiple worker threads. A decoder pool (`cre
 
 **Errors:** `KodaParseError`, `KodaEncodeError`, `KodaDecodeError` (with `.position` or `.byteOffset` where applicable).
 
-Full specification (grammar, binary layout, canonicalization): [SPEC.md](./SPEC.md).
+Full specification (grammar, binary layout, canonicalization): [SPEC.md](https://github.com/hghukasyan/koda-format/blob/main/SPEC.md).
 
 ## Building the native addon
 
@@ -133,3 +133,4 @@ Requires Node.js build tools and a C++ compiler. The addon is used automatically
 ## License
 
 MIT
+
