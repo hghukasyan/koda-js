@@ -1,7 +1,7 @@
 {
   "targets": [
     {
-      "target_name": "koda_format",
+      "target_name": "koda_js",
       "sources": [
         "native/binding.cc",
         "native/koda_binary.cc",

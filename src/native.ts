@@ -17,7 +17,7 @@ let cached: NativeBinding | null | undefined = undefined;
 /**
  * Return the native binding if the addon was built, otherwise null.
  * @param callerUrl - URL of the calling module (e.g. import.meta.url) for resolve context
- * @param addonPath - Path to koda_format.node
+ * @param addonPath - Path to koda_js.node
  */
 export function loadNative(callerUrl: string, addonPath: string): NativeBinding | null {
   if (cached !== undefined) return cached;

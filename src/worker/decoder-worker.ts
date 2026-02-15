@@ -12,7 +12,7 @@ import type { DecodeOptions } from '../decoder.js';
 import { loadNative, type NativeBinding } from '../native.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const addonPath = join(__dirname, '..', '..', 'build', 'Release', 'koda_format.node');
+const addonPath = join(__dirname, '..', '..', 'build', 'Release', 'koda_js.node');
 
 let cachedNative: NativeBinding | null | undefined = undefined;
 

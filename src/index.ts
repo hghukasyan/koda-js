@@ -2,7 +2,7 @@
  * KODA — Compact Object Data Architecture
  * Text (.koda) and canonical binary (.kod) format.
  * Uses C++ native addon when built for best size and speed; falls back to JS.
- * @module koda-format
+ * @module koda-js
  */
 
 import { readFile, writeFile } from 'node:fs/promises';
@@ -34,7 +34,7 @@ export type { DecoderPool, DecoderPoolOptions } from './decode-async.js';
 export { createEncodeStream, createDecodeStream } from './streams.js';
 export type { EncodeStreamOptions, DecodeStreamOptions } from './streams.js';
 
-const _addonPath = join(dirname(dirname(fileURLToPath(import.meta.url))), 'build', 'Release', 'koda_format.node');
+const _addonPath = join(dirname(dirname(fileURLToPath(import.meta.url))), 'build', 'Release', 'koda_js.node');
 
 function getNative(): NativeBinding | null {
   return loadNative(import.meta.url, _addonPath);

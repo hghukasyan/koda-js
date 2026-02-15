@@ -1,13 +1,13 @@
-# koda-format
+# koda-js
 
 Compact Object Data Architecture: a structured data format with a human-readable text syntax and a canonical binary encoding. Optimized for compact storage and scalable backend processing.
 
-[![npm version](https://img.shields.io/npm/v/koda-format.svg)](https://www.npmjs.com/package/koda-format)
+[![npm version](https://img.shields.io/npm/v/koda-js.svg)](https://www.npmjs.com/package/koda-js)
 
 ## Installation
 
 ```bash
-npm install koda-format
+npm install koda-js
 ```
 
 Requires Node.js 18 or later.
@@ -15,7 +15,7 @@ Requires Node.js 18 or later.
 ## Quick example
 
 ```ts
-import { parse, stringify, encode, decode } from 'koda-format';
+import { parse, stringify, encode, decode } from 'koda-js';
 
 // Text format (.koda): key-value, optional commas, comments
 const value = parse(`
@@ -126,7 +126,7 @@ Each stream record is `[varint length][KODA binary payload]`. Frames can be spli
 
 **Errors:** `KodaParseError`, `KodaEncodeError`, `KodaDecodeError` (with `.position` or `.byteOffset` where applicable).
 
-Full specification (grammar, binary layout, canonicalization): [SPEC.md](https://github.com/hghukasyan/koda-format/blob/main/SPEC.md).
+Full specification (grammar, binary layout, canonicalization): [SPEC.md](https://github.com/hghukasyan/koda-js/blob/main/SPEC.md).
 
 ## Streaming
 
@@ -143,7 +143,7 @@ The **varint** is unsigned LEB128 (7 bits per byte, high bit = more bytes). The 
 **Decode stream** — accepts binary chunks, emits one value per frame. Options: `maxFrameSize` (e.g. `1024 * 1024` for 1 MB limit), `maxDepth`, `maxDictionarySize`, `maxStringLength`, `highWaterMark`.
 
 ```ts
-import { createEncodeStream, createDecodeStream } from 'koda-format';
+import { createEncodeStream, createDecodeStream } from 'koda-js';
 import { PassThrough } from 'node:stream';
 
 const encoder = createEncodeStream();

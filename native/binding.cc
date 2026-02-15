@@ -171,4 +171,4 @@ static Napi::Object Init(Napi::Env env, Napi::Object exports) {
   return exports;
 }
 
-NODE_API_MODULE(koda_format, Init)
+NODE_API_MODULE(koda_js, Init)

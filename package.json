@@ -1,5 +1,5 @@
 {
-  "name": "koda-format",
+  "name": "koda-js",
   "version": "1.0.8",
   "type": "module",
   "description": "Compact Object Data Architecture — text and binary format with canonical encoding",
@@ -15,7 +15,7 @@
     "benchmark": "node benchmark/bench.mjs"
   },
   "keywords": [
-    "koda",
+    "koda-js",
     "data-format",
     "serialization",
     "binary",
@@ -26,11 +26,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hghukasyan/koda-format.git"
+    "url": "https://github.com/hghukasyan/koda-js.git"
   },
-  "homepage": "https://github.com/hghukasyan/koda-format#readme",
+  "homepage": "https://github.com/hghukasyan/koda-js#readme",
   "bugs": {
-    "url": "https://github.com/hghukasyan/koda-format/issues"
+    "url": "https://github.com/hghukasyan/koda-js/issues"
   },
   "dependencies": {
     "node-addon-api": "^8.0.0"

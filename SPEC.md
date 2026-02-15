@@ -5,7 +5,7 @@
 **Version:** 1.0  
 **Status:** Draft  
 
-**npm package:** [koda-format](https://www.npmjs.com/package/koda-format)
+**npm package:** [koda-js](https://www.npmjs.com/package/koda-js)
 
 ---
 
@@ -18,7 +18,7 @@ KODA (Compact Object Data Architecture) is a structured data format designed for
 
 KODA addresses limitations of JSON (verbosity, no comments, non-deterministic key order), YAML (complexity, security issues), and binary formats like MessagePack (non-canonical, key repetition).
 
-**Positioning:** KODA is a **compact binary data format** first. It is optimized for **smaller payloads**, **efficient storage**, **reduced IO**, and **fast binary encode/decode** - not for beating JSON on raw text parsing speed. In real systems, KODA wins on size, IO efficiency, storage, and scalability (see [README](https://github.com/hghukasyan/koda-format#readme)).
+**Positioning:** KODA is a **compact binary data format** first. It is optimized for **smaller payloads**, **efficient storage**, **reduced IO**, and **fast binary encode/decode** - not for beating JSON on raw text parsing speed. In real systems, KODA wins on size, IO efficiency, storage, and scalability (see [README](https://github.com/hghukasyan/koda-js#readme)).
 
 ---
 
